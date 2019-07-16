@@ -1,0 +1,100 @@
+% Created 2019-06-18 mar 14:09
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Roland Coeurjoly}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Roland Coeurjoly},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.2 (Org mode 9.2)},
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Introduction}
+\label{sec:orga988734}
+The purpose of this project is to compile mathematical proofs that are both rigorous and easy to understand.
+At first, the format of the proof may be somewhat aleatory (video, picture, text, etc), but with time I would like to format them in an appropriate language, such as LaTex, and design the functions with python, for example.
+\section{Test}
+\label{sec:org7883383}
+
+\begin{equation}                        % arbitrary environments,
+x=\sqrt{b}                              % even tables, figures
+\end{equation}
+\begin{equation}
+x\leq{y}\leq{f}
+\end{equation}
+\section{Derivative of product}
+\label{sec:orge46fcbd}
+Definition of derivative:
+
+\begin{equation}
+h\ensuremath{'}(x) = \lim_{\Delta{x} \to 0}\frac{h(x+\Delta {x}) - h(x)}{\Delta x}
+\end{equation}
+
+Provided that the limit exists. We now express h using the product of f and g.
+
+\begin{equation}
+\begin{split}
+h\ensuremath{'}(x) &= \lim_{\Delta{x} \to 0}\frac{h(x+\Delta {x}) - h(x)}{\Delta x} \\
+                   &= \lim_{\Delta{x} \to 0}\frac{f(x+\Delta {x})g(x+\Delta {x}) - f(x)g(x)}{\Delta x}
+\end{split}
+\end{equation}
+
+To make further progress, we need to relate our limit formula to the limit formulas for the derivatives of f and g, namely
+
+
+\begin{equation}
+f\ensuremath{'}(x) = \lim_{\Delta{x} \to 0}\frac{f(x+\Delta {x}) - f(x)}{\Delta x}
+\end{equation}
+
+
+\begin{equation}
+g\ensuremath{'}(x) = \lim_{\Delta{x} \to 0}\frac{g(x+\Delta {x}) - g(x)}{\Delta x}
+\end{equation}
+
+We use the trick of adding and subtracting
+
+\begin{equation}
+f(x)g(x+\Delta {x})
+\end{equation}
+
+\begin{equation}
+\begin{split}
+h\ensuremath{'}(x) &= \lim_{\Delta{x} \to 0}\frac{f(x+\Delta {x})g(x+\Delta {x}) - f(x)g(x)}{\Delta x} \\
+                   &= \lim_{\Delta{x} \to 0}\frac{f(x+\Delta {x})g(x+\Delta {x}) + (f(x)g(x+\Delta {x}) - f(x)g(x+\Delta {x})) - f(x)g(x)}{\Delta x} \\
+\end{split}
+\end{equation}
+\section{Riemann Zeta function}
+\label{sec:org7ad6538}
+\begin{equation}
+\zeta(s) =\sum_{n=1}^\infty\frac{1}{n^s}
+\end{equation}
+\LaTeX
+
+\section{Plots}
+\label{sec:orgab8c9ae}
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[x=5cm]
+  \draw[xstep=.2,ystep=.5,lightgray,ultra thin](-0.1,-1.5)grid(1.1,1.5);
+\end{tikzpicture}
+\end{figure}
+\end{document}
